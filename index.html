@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounting Software</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Accounting Software</h1>
+        
+        <!-- Balance Section -->
+        <div class="balance">
+            <strong>Current Balance:</strong>
+            <span id="balanceIRR">0 IRR</span> |
+            <span id="balanceUSD">0 USD</span>
+        </div>
+
+        <!-- Form for Adding Transactions -->
+        <div class="form-container">
+            <label for="description">Description:</label>
+            <input type="text" id="description" placeholder="Description">
+            
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" placeholder="Amount">
+            
+            <label for="currency">Currency:</label>
+            <select id="currency">
+                <option value="IRR">Iranian Rial (IRR)</option>
+                <option value="USD">US Dollar (USD)</option>
+            </select>
+            
+            <label for="type">Type:</label>
+            <select id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            
+            <label for="exchangeRate">Exchange Rate (IRR per USD):</label>
+            <input type="number" id="exchangeRate" value="90000">
+            
+            <button onclick="addTransaction()">Add Transaction</button>
+        </div>
+        
+        <!-- Transactions Table -->
+        <table id="transactionsTable">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Type</th>
+                    <th>Amount (IRR)</th>
+                    <th>Amount (USD)</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Transactions will be displayed here -->
+            </tbody>
+        </table>
+    </div>
+
+=   <script src="script.js"></script>
+</body>
+</html>
